@@ -1,0 +1,59 @@
+@import 'tailwindcss';
+
+/* Custom color palette - Japanese aesthetic */
+@theme {
+  --color-mahjong-dark: #1a1a2e;
+  --color-mahjong-medium: #16213e;
+  --color-mahjong-accent: #0f3460;
+  --color-mahjong-highlight: #e94560;
+  --color-mahjong-gold: #d4a03e;
+  --color-mahjong-tile: #f5f0e8;
+  --color-mahjong-tile-back: #2d5a27;
+}
+
+/* Base styles */
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.95);
+  background-color: var(--color-mahjong-dark);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Prevent text selection during gameplay */
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Touch optimizations for mobile */
+@media (pointer: coarse) {
+  button, .tile {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Safe area insets for notched devices */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
