@@ -1,0 +1,12 @@
+name: riichi-mahjong
+region: nyc
+static_sites:
+  - name: web
+    github:
+      repo: 0x000NULL/mahjong
+      branch: main
+    build_command: npm run build
+    output_dir: dist
+    environment_slug: node-js
+    routes:
+      - path: /
